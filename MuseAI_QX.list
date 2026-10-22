@@ -1,0 +1,49 @@
+# Muse AI (Meta) - Quantumult X 分流规则集
+# Converted from Loon: https://github.com/juner922/muse-loon-rules/blob/main/MuseAI.list
+# Source: Meta Muse client teardown - github.com/mahdi-salmanzade/meta-muse-teardown
+# Updated: 2026-09-29 (source list)
+#
+# Usage:
+# 1) Local: paste the rules below into [filter_local], before your final rule.
+# 2) Remote: add this file as a [filter_remote] resource and set
+#    force-policy to your US policy group - QX will then ignore
+#    the "proxy" policy at the end of each line below.
+# 3) To use a different group directly, batch-replace ",proxy"
+#    at line ends with ",YourPolicyName" (e.g. ",美国节点").
+#
+# Important: Muse is region-locked. Even with all domains proxied,
+# a non-US / datacenter / broadcast exit IP may still show
+# "not available in your country or region". Use a US native /
+# residential IP node.
+
+# === Core: Muse app ===
+host-suffix,muse.ai,proxy
+host-suffix,museai.com,proxy
+host-suffix,meta.ai,proxy
+host-suffix,meta.com,proxy
+host-suffix,atmeta.com,proxy
+
+# === Secure VM infrastructure ===
+host-suffix,metaaivm.com,proxy
+host-suffix,metaaiusercontent.com,proxy
+host-suffix,ecto1usercontent.com,proxy
+host,hatch.ecto1.ai,proxy
+host,node.hatch.one,proxy
+host,meta.privacy-gateway.cloudflare.com,proxy
+host,meta.hpke-keys.privacy-gateway.cloudflare.com,proxy
+host,meta-ohttp-relay-prod.fastly-edge.com,proxy
+host,meta-ohttp-config-prod.fastly-edge.com,proxy
+
+# === WhatsApp integration ===
+host-suffix,whatsapp.com,proxy
+host-suffix,whatsapp.net,proxy
+
+# === Meta account / Facebook / Instagram ===
+host-suffix,facebook.com,proxy
+host-suffix,facebook.net,proxy
+host-suffix,fbcdn.net,proxy
+host-suffix,fbsbx.com,proxy
+host-suffix,fbpigeon.com,proxy
+host-suffix,fb.com,proxy
+host-suffix,instagram.com,proxy
+host-suffix,cdninstagram.com,proxy
